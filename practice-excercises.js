@@ -4,7 +4,7 @@ console.log(`hello ${name}!!`)
 sayHello('mariana')
 //function expression 
 //here, the function itself is stored in a variable; therefore use the function keyword like above, instead of this
-//preffered way to write functions:
+//preferred way to write functions:
 const sayGoodbye = function(goodByePhrase, name){
   console.log(`${goodByePhrase} ${name}!`)
 }
@@ -77,3 +77,5 @@ const planetHasWater = function(planet){
 planetHasWater('mars');
 
 console.log(planetHasWater('venus'));
+
+//max of 2 numbers
