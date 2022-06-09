@@ -78,4 +78,4 @@ planetHasWater('mars');
 
 console.log(planetHasWater('venus'));
 
-//max of 2 numbers
+
