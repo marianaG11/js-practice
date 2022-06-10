@@ -78,4 +78,3 @@ planetHasWater('mars');
 
 console.log(planetHasWater('venus'));
 
-
