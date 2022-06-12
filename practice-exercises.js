@@ -1,7 +1,7 @@
 //functions
-console.log(`hello ${name}!!`)
+// console.log(`hello ${name}!!`)
 
-sayHello('mariana')
+// sayHello('mariana')
 //function expression 
 //here, the function itself is stored in a variable; therefore use the function keyword like above, instead of this
 //preferred way to write functions:
@@ -78,3 +78,23 @@ planetHasWater('mars');
 
 console.log(planetHasWater('venus'));
 
+//fizzbuzz
+function fizzbuzz(n){
+  let i = 0;
+  for (i = 1; i <= n; i++){
+    //number divisible by 3 and 5
+    if (i % 15 === 0){
+      console.log('Fizzbuzz')
+      //number divisible by 3
+    } else if (i % 3 === 0){
+      console.log('fizz')
+      //number divisble by 5
+    } else if (i % 5 === 0){
+      console.log('buzz')
+    }else {
+      console.log(i)
+    }
+  }
+};
+
+let solution = fizzbuzz(50)
