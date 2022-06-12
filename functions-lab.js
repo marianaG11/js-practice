@@ -106,3 +106,6 @@ const stringsLongerThan = function(arr, len){
 };
 
 console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 5));
+
+//9. Define a function, as a function expression, sumArray that takes an array of numbers
+//and returns the sum of those numbers. For example, sumArray([2, 4, 5]); would return 11.
