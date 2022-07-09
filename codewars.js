@@ -57,3 +57,23 @@ function sortString(s){
 };
 s = 'this is test number two'
 console.log(sortString(s));
+
+//6. find the middle element (7kyu)
+    //create a function that when provided with a triplet
+    //returns the index of the numerical element that lies between the other two elements.
+function gimme(triplet){
+    return triplet.indexOf(triplet.concat().sort(function(a, b) {return a -b })[1])
+}
+triplet = [1, 2, 4]
+console.log(gimme(triplet));
+
+//another method
+function gimme(triplet){
+    const copy = [] 
+    for (let i of triplet) {copy.push(i)}
+    copy.sort((a, b) => a-b);
+    return triplet.indexOf(copy[1]);
+};
+triplet = [1, 5, 2]
+console.log(gimme(triplet));
+//7. powers of 2
