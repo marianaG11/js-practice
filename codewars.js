@@ -76,4 +76,17 @@ function gimme(triplet){
 };
 triplet = [1, 5, 2]
 console.log(gimme(triplet));
-//7. powers of 2
+
+
+//7. remove vowels (7kyu)
+    // write a function that takes a string and return a new string with all vowels removed.
+
+function removeVowels(str){
+    return str.replace(/[aeiou]/gi, ''); //regex
+    //[aeiou] is a character class/set
+    //g and i are regex modifiers
+    //g means global (find all matches), i means case insensitive (to also match the upper case vowels)
+    //replace the matches w/ an empty string, removing the vowels
+}; 
+str = 'does this work ' 
+console.log(removeVowels(str));
