@@ -88,5 +88,19 @@ function removeVowels(str){
     //g means global (find all matches), i means case insensitive (to also match the upper case vowels)
     //replace the matches w/ an empty string, removing the vowels
 }; 
-str = 'does this work ' 
+str = 'does this work' 
 console.log(removeVowels(str));
+
+//8. powers of 2 (8kyu)
+//Complete the function that takes a non-negative integer n as input
+//and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+function powersOfTwo(n){
+    let powers = []; //create empty array 
+    for (i = 0; i <= n; i++){
+        //Math.pow() takes 2 arguments: (base, exponent)
+        powers.push(Math.pow(2, i)) //push() adds elements to end of array
+    }
+    return powers;
+};
+n = 2
+console.log(powersOfTwo(n));
