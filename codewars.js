@@ -92,8 +92,8 @@ str = 'does this work'
 console.log(removeVowels(str));
 
 //8. powers of 2 (8kyu)
-//Complete the function that takes a non-negative integer n as input
-//and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+    //Complete the function that takes a non-negative integer n as input
+    //and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 function powersOfTwo(n){
     let powers = []; //create empty array 
     for (i = 0; i <= n; i++){
@@ -104,3 +104,14 @@ function powersOfTwo(n){
 };
 n = 2
 console.log(powersOfTwo(n));
+
+//9. nice array (7kyu)
+    //A Nice array is defined to be an array where for every value n in the array
+    //there is also an element n - 1 or n + 1 in the array.
+
+    //every() method tests whether all elements in the array pass the test implemented by
+    //the function; returns a Boolean value
+const isNice = arr => Boolean(arr.length) && arr.every(i => arr.includes(i-1) || arr.includes(i+1));
+
+arr = [2, 10, 9, 3]
+console.log(isNice(arr));
