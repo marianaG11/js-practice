@@ -115,3 +115,10 @@ const isNice = arr => Boolean(arr.length) && arr.every(i => arr.includes(i-1) ||
 
 arr = [2, 10, 9, 3]
 console.log(isNice(arr));
+
+
+//10. return the closest number multiple of 10 (7kyu)
+const closestMultiple10 = num => Math.round(num/ 10) * 10
+
+num = 22
+console.log(closestMultiple10(num))
