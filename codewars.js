@@ -122,3 +122,14 @@ const closestMultiple10 = num => Math.round(num/ 10) * 10
 
 num = 22
 console.log(closestMultiple10(num))
+
+
+// //11. sum of odd numbers (7kyu)
+    //every row increases by one number
+    //n is the row number
+    //Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) 
+function rowSumOddNumbers(n){
+    return Math.pow(n, 3); //n is base, 3 is exponent
+};
+n = 2
+console.log(rowSumOddNumbers(n));
