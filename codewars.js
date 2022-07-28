@@ -124,7 +124,7 @@ num = 22
 console.log(closestMultiple10(num))
 
 
-// //11. sum of odd numbers (7kyu)
+//11. sum of odd numbers (7kyu)
     //every row increases by one number
     //n is the row number
     //Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) 
@@ -133,3 +133,29 @@ function rowSumOddNumbers(n){
 };
 n = 2
 console.log(rowSumOddNumbers(n));
+
+
+//12. get the middle character
+    //return the middle character of the word
+    //if the word's length is odd return middle, if even return the 2 middle ones
+
+function getMiddle(string){
+    let middleChar = Math.floor(string.length / 2);
+    if (string.length % 2 == 0){ //if s.length is even
+        return string[middleChar - 1] + string[middleChar] //return 2 characters
+    } else {
+        return string[middleChar] //return one character
+    }
+};
+string = "testingg"
+console.log(getMiddle(string));
+
+    //method 2 using slicing 
+        //slice() method extracts a section of a string and returns a new one
+        //slice(indexStart, indexEnd) (indexEnd not inclusive)
+function getMiddle(s){
+    return s.slice((s.length-1)/2, s.length/2 + 1);
+};
+s = "testingg"
+console.log(getMiddle(s));
+
