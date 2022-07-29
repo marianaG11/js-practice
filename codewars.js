@@ -135,7 +135,7 @@ n = 2
 console.log(rowSumOddNumbers(n));
 
 
-//12. get the middle character
+//12. get the middle character (7kyu)
     //return the middle character of the word
     //if the word's length is odd return middle, if even return the 2 middle ones
 
@@ -158,4 +158,38 @@ function getMiddle(s){
 };
 s = "testingg"
 console.log(getMiddle(s));
+
+//13. Complementary DNA (7kyu)
+    // method 1 w/ for loop
+function dnaStrand(dna){
+    let secondStrand = ""
+    for ( i = 0; i < dna.length; i++ ){
+        if (dna[i] == 'A'){
+            secondStrand += ('T')
+        }
+        else if (dna[i] == 'T'){
+            secondStrand += ('A')
+        }if (dna[i] == 'G'){
+            secondStrand += ('C')
+        }if (dna[i] == 'C'){
+            secondStrand += ('G')
+        }
+    }
+    return secondStrand
+};
+
+dna = 'ATGCC'
+console.log(dnaStrand(dna))
+
+    //method2 with split and map
+function DNAStrand(dna){
+    const bases = { A: 'T', T: 'A', G: 'C', C: 'G'}
+    //split() divides string into an ordered list of substrings: [ 'A', 'T', 'G', 'C', 'C' ]
+    //map ()creates a new array, populated with the results of calling a provided function on every element
+    //in the calling array map(callBackfunction)
+    //joins the elements in an array and returns a new string w/ them
+    return dna.toUpperCase().split('').map(c => bases[c]).join('');
+};
+dna = 'ATGCTa'
+console.log(DNAStrand(dna));
 
