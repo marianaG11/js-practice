@@ -187,9 +187,27 @@ function DNAStrand(dna){
     //split() divides string into an ordered list of substrings: [ 'A', 'T', 'G', 'C', 'C' ]
     //map ()creates a new array, populated with the results of calling a provided function on every element
     //in the calling array map(callBackfunction)
-    //joins the elements in an array and returns a new string w/ them
+    //join() method joins the elements in an array and returns a new string w/ them
     return dna.toUpperCase().split('').map(c => bases[c]).join('');
 };
 dna = 'ATGCTa'
 console.log(DNAStrand(dna));
 
+//14.  weird string case (7kyu)
+function toWeirdString(s){
+    s = s.toLowerCase().split(' ')
+    for (let i = 0; i < s.length; i++){
+        s[i] = s[i].split('')
+        
+        for (let j = 0; j < s[i].length; j++){
+            if (j % 2 == 0){
+                s[i][j] = s[i][j].toUpperCase()
+            }
+        }
+        s[i] = s[i].join('')
+    }
+    return s.join(' ')
+};
+
+s = 'mariana'
+console.log(toWeirdString(s));
