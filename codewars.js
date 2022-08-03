@@ -195,12 +195,12 @@ console.log(DNAStrand(dna));
 
 //14.  weird string case (7kyu)
 function toWeirdString(s){
-    s = s.toLowerCase().split(' ')
+    s = s.toLowerCase().split(' ') //split(' ') removes spaces
     for (let i = 0; i < s.length; i++){
-        s[i] = s[i].split('')
+        s[i] = s[i].split('') 
         
         for (let j = 0; j < s[i].length; j++){
-            if (j % 2 == 0){
+            if (j % 2 == 0){ //if index is even
                 s[i][j] = s[i][j].toUpperCase()
             }
         }
@@ -211,3 +211,14 @@ function toWeirdString(s){
 
 s = 'mariana'
 console.log(toWeirdString(s));
+
+
+//15. flatten and sort the array (7kyu)
+function flattenAndSortArray(array1){
+    let flatArray = array1.flat()
+    return flatArray.sort()
+    
+}
+
+array1 = [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]
+console.log(flattenAndSortArray(array1))
