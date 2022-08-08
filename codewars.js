@@ -213,12 +213,24 @@ s = 'mariana'
 console.log(toWeirdString(s));
 
 
-//15. flatten and sort the array (7kyu)
-function flattenAndSortArray(array1){
-    let flatArray = array1.flat()
-    return flatArray.sort()
+// //15. flatten and sort the array (7kyu) gives error in codewars
+// function flattenAndSortArray(array1){
+//     let flatArray = array1.flat()
+//     return flatArray.sort()
     
-}
+// }
 
-array1 = [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]
-console.log(flattenAndSortArray(array1))
+// array1 = [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]
+// console.log(flattenAndSortArray(array1))
+
+
+//16. how many consecutive numbers (7kyu)
+    //Create the function consecutive(arr) that takes an array of integers and return the minimum number of integers
+    //needed to make the contents of arr consecutive from the lowest number to the highest number
+
+    //using spread syntax and ternary operator
+const consecutive = arr => arr.length ? Math.max(...arr) - Math.min(...arr) + 1 - arr.length : 0
+
+
+arr = [ 2, 4, 6, 8]
+console.log(consecutive(arr))
