@@ -234,3 +234,14 @@ const consecutive = arr => arr.length ? Math.max(...arr) - Math.min(...arr) + 1 
 
 arr = [ 2, 4, 6, 8]
 console.log(consecutive(arr))
+
+
+//17. bumps in the road (7kyu)
+    //Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less
+    //return Woohoo!, otherwise return Car Dead
+    
+    //using a ternary operator
+const bump = road => road.split('n').length > 16 ? "Car Dead": "Woohoo!"
+
+road = 'n____nn'
+console.log(bump(road))
