@@ -239,9 +239,23 @@ console.log(consecutive(arr))
 //17. bumps in the road (7kyu)
     //Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less
     //return Woohoo!, otherwise return Car Dead
-    
+
     //using a ternary operator
 const bump = road => road.split('n').length > 16 ? "Car Dead": "Woohoo!"
 
 road = 'n____nn'
 console.log(bump(road))
+
+
+//18. all unique (7kyu)
+    // determine if a string contains only unique characters. Return true if it does and false otherwise.
+    //characters are case sensitive
+
+    //set() store unique values
+    //size() returns the number of unique elements in a set object
+const hasUniqueChars = str =>
+    new Set(str).size == str.length;
+
+
+str = "test"
+console.log(hasUniqueChars(str))
