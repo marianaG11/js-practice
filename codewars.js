@@ -259,3 +259,17 @@ const hasUniqueChars = str =>
 
 str = "test"
 console.log(hasUniqueChars(str))
+
+
+//19. move 10 (7kyu)
+    //method 1
+    //separate letters into their own elements using split()
+    //map() creates new array with new results from a function on every element
+const moveTen = s => 
+    s.split("").map(element => element.charCodeAt() + 10 > 122 ? String.fromCharCode(element.charCodeAt() - 16) :
+    String.fromCharCode(element.charCodeAt() + 10)).join('')
+
+s = "a"
+console.log(moveTen(s))
+
+
