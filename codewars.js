@@ -273,3 +273,11 @@ s = "a"
 console.log(moveTen(s))
 
 
+//20. numbers to letters (7kyu)
+    //return a string with numbers corresponding to letters in reverse order
+    //include !, ?, ' '
+const characters = ' zyxwvutsrqponmlkjihgfedcba!? '
+const switcher = x => x.map(i => characters[i]).join('') //reverse at index element
+
+x = ['26', '25', '24'] //gives a b c 
+console.log(switcher(x))
