@@ -274,6 +274,7 @@ console.log(moveTen(s))
 
 
 //20. numbers to letters (7kyu)
+    //given an array of numbers in string format
     //return a string with numbers corresponding to letters in reverse order
     //include !, ?, ' '
 const characters = ' zyxwvutsrqponmlkjihgfedcba!? '
@@ -281,3 +282,29 @@ const switcher = x => x.map(i => characters[i]).join('') //reverse at index elem
 
 x = ['26', '25', '24'] //gives a b c 
 console.log(switcher(x))
+
+
+//21. likes vs dislikes (7kyu)
+    //Create a function that takes in a list of button inputs and returns the final state.
+function likeOrDislike(buttons){
+    let currentState = 'Nothing'
+    for (let i = 0; i < buttons.length; i++){
+        if (buttons[i] === currentState){
+            currentState = 'Nothing'  //return Nothing if no button is currently active
+        } else {
+            currentState = buttons[i]
+        }
+    } return currentState
+};
+
+buttons = ["Like", "Dislike"]
+console.log(likeOrDislike(buttons))
+
+
+    //method 2 using reduce() method and ternary operator
+function likeOrDislike(buttons){
+   return buttons.reduce((currentState, button) => button === currentState ? "Nothing": button, "Nothing");
+};
+
+buttons = ["Like", "Dislike"]
+console.log(likeOrDislike(buttons))
