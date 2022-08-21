@@ -308,3 +308,14 @@ function likeOrDislike(buttons){
 
 buttons = ["Like", "Dislike"]
 console.log(likeOrDislike(buttons))
+
+
+//22. find multiples of a number (8kyu)
+function findMultiples(integer, limit){
+    let result = []
+    for (let i = integer; i <= limit; i += integer)
+        result.push(i)
+    return result
+}
+
+console.log(findMultiples(5, 25))
