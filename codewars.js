@@ -316,6 +316,19 @@ function findMultiples(integer, limit){
     for (let i = integer; i <= limit; i += integer)
         result.push(i)
     return result
-}
+};
 
 console.log(findMultiples(5, 25))
+
+
+//23. multiples of 3 or 5 (6kyu)
+function solution(number){
+    let total = 0;
+    for (let i = 3; i < number; i++){
+        if(i % 3 === 0 || i % 5 === 0)
+            total += i
+    }
+    return total
+};
+
+console.log(solution(10));
