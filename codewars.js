@@ -322,6 +322,7 @@ console.log(findMultiples(5, 25))
 
 
 //23. multiples of 3 or 5 (6kyu)
+    //return the sum of all the multiples of 3 or 5 below the number passed in
 function solution(number){
     let total = 0;
     for (let i = 3; i < number; i++){
@@ -332,3 +333,33 @@ function solution(number){
 };
 
 console.log(solution(10));
+
+
+//24. find numbers which are divisible by a given number (8kyu)
+function divisibleBy(numbers, divisor){
+    let divisible_numbers = [];
+    for (let i = 0; i < numbers.length; i++){
+        if( numbers[i] % divisor === 0){
+            divisible_numbers.push(numbers[i])
+        }
+    }
+    return divisible_numbers
+};
+
+numbers = [1, 2, 3, 4, 5, 6]
+divisor = 2 
+
+console.log(divisibleBy(numbers, divisor));
+
+    //method 2 using filter() method
+        //filter() creates a shallow copy of a portion of a given array, filtered w/ just the elements
+        // that pass the test provided by the function 
+function divisibleBy(numbers, divisor){
+    return numbers.filter( num => num % divisor === 0);
+}
+
+numbers = [1, 2, 3, 4, 5, 6]
+divisor = 2 
+
+console.log(divisibleBy(numbers, divisor));
+
