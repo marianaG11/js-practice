@@ -363,3 +363,14 @@ divisor = 2
 
 console.log(divisibleBy(numbers, divisor));
 
+//25. convert number to reversed array of digits (8kyu)
+    //toString() method returns a string representing the specified string
+    //return the digits of this number within an array in reverse order.
+    //split() method divides a string into an ordered list of substrings; returns an array
+    //reverse() method reverses an array in place
+function digitize(n){
+    return n.toString().split("").reverse().map((i) => Number(i)) 
+};
+
+n = 1234
+console.log(digitize(n));
