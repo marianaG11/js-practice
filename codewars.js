@@ -364,8 +364,8 @@ divisor = 2
 console.log(divisibleBy(numbers, divisor));
 
 //25. convert number to reversed array of digits (8kyu)
-    //toString() method returns a string representing the specified string
     //return the digits of this number within an array in reverse order.
+    //toString() method returns a string representing the specified string
     //split() method divides a string into an ordered list of substrings; returns an array
     //reverse() method reverses an array in place
 function digitize(n){
@@ -374,3 +374,21 @@ function digitize(n){
 
 n = 1234
 console.log(digitize(n));
+
+
+    //method 2 
+function digitize(n){
+    return Array.from(String(n), Number).reverse()
+};
+
+n = 1234
+console.log(digitize(n))
+
+
+//26. count odd numbers below n (8kyu)
+    //return the number of positive odd numbers below n
+function oddCount(n){
+    return Math.floor(n/2);
+}
+n = 15
+console.log(oddCount(n))
