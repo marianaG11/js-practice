@@ -392,3 +392,22 @@ function oddCount(n){
 }
 n = 15
 console.log(oddCount(n))
+
+
+//27. factorial (7kyu)
+    // w/ ternary operator
+    // Write a function to calculate factorial for a given input
+    // If input is below 0 or above 12 throw an exception - RangeError
+function factorial(n){
+    if (n < 0 || n > 12){
+        throw new RangeError();
+    }
+    let total = 1;
+    for (let i = 2; i <= n; i++){
+        total *= i
+    }
+    return total;
+};
+
+n = 5
+console.log(factorial(n));
