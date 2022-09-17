@@ -395,7 +395,6 @@ console.log(oddCount(n))
 
 
 //27. factorial (7kyu)
-    // w/ ternary operator
     // Write a function to calculate factorial for a given input
     // If input is below 0 or above 12 throw an exception - RangeError
 function factorial(n){
@@ -411,3 +410,16 @@ function factorial(n){
 
 n = 5
 console.log(factorial(n));
+
+
+//28. are the numbers in order? (7kyu)
+function inAscOrder(arr){
+    for ( let i = 0; i < arr.length - 1; i++){
+        if (arr[i] > arr[i + 1]) {
+            return false
+        }
+    } return true
+};
+
+arr = [1, 2, 3, 5, 3]
+console.log(inAscOrder(arr))
