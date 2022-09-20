@@ -414,12 +414,29 @@ console.log(factorial(n));
 
 //28. are the numbers in order? (7kyu)
 function inAscOrder(arr){
-    for ( let i = 0; i < arr.length - 1; i++){
+    for (let i = 0; i < arr.length - 1; i++){
         if (arr[i] > arr[i + 1]) {
-            return false
+            return false;
         }
-    } return true
+    } return true;
 };
 
 arr = [1, 2, 3, 5, 3]
-console.log(inAscOrder(arr))
+console.log(inAscOrder(arr));
+
+//29 sum of all arguments (7kyu)
+function sum(){
+    let totalSum = 0;
+    for (let i in arguments){
+        totalSum += arguments[i];
+    }
+    return totalSum;
+}
+
+console.log(sum(1, 3, 4));
+
+    //method 2 using spread operator and .reduce() method
+function sum(...args){
+    return args.reduce((prev, current) => prev + current);
+}
+
