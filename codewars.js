@@ -440,3 +440,10 @@ function sum(...args){
     return args.reduce((prev, current) => prev + current);
 }
 
+//30. ones and zeros (7kyu)
+    //convert the equivalent binary value to an integer
+const binaryArrayToNumber = arr => 
+    parseInt(arr.join(''), 2);
+
+
+console.log(binaryArrayToNumber([0, 0, 0, 1]));
