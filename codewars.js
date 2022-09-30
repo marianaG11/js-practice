@@ -442,8 +442,22 @@ function sum(...args){
 
 //30. ones and zeros (7kyu)
     //convert the equivalent binary value to an integer
+    //parseInt() function parses a string argument and returns an integer of the specified radix
+    // syntax parseInt(string, radix)
 const binaryArrayToNumber = arr => 
-    parseInt(arr.join(''), 2);
+    parseInt(arr.join(''), 2); //join joins array elements into a string
 
 
 console.log(binaryArrayToNumber([0, 0, 0, 1]));
+
+//31. sum of a sequence (7kyu)
+    //return the sum of a sequence of integers.
+const sequenceSum = (begin, end, step) => {
+    let total = 0;
+    for (let i = begin; i <= end; i+= step){
+        total += i;
+    }
+    return total;
+};
+
+console.log(sequenceSum(2, 3, 5))
