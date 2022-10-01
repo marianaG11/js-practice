@@ -460,4 +460,15 @@ const sequenceSum = (begin, end, step) => {
     return total;
 };
 
-console.log(sequenceSum(2, 3, 5))
+console.log(sequenceSum(2, 3, 5));
+
+//32. small enough (7kyu)
+    //given an array and a limit value
+    //check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+    //every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+function smallEnough(array1, limit){
+   return  array1.every(element => element <= limit); 
+};
+
+console.log(smallEnough([1, 2, 3, 4], 5));
+

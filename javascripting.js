@@ -95,7 +95,7 @@ console.log(example.length); //.length property
 
 //rounding numbers
 const roundUp = 1.5;
-//use Math.roundt() method
+//use Math.round() method
 const rounded = Math.round(roundUp);
 
 console.log(rounded);
