@@ -472,3 +472,12 @@ function smallEnough(array1, limit){
 
 console.log(smallEnough([1, 2, 3, 4], 5));
 
+//33. multiply all elements in an array (7kyu)
+    //make a function multiplyAll/multiply_all which takes an array of integers as an argument
+    //This function must return another function, which takes a single integer as an argument and returns a new array.
+    //returned array should consist of each of the elements from the first array multiplied by the integer.
+function multiplyAll(array1){
+    return element => array1.map(integer => element * integer);
+}
+
+console.log(multiplyAll([1, 2, 3])(2));
