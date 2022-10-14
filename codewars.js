@@ -481,3 +481,21 @@ function multiplyAll(array1){
 }
 
 console.log(multiplyAll([1, 2, 3])(2));
+
+
+//34. loop statement for (7kyu)
+    // given an array of numbers, separate odd and even numbers into their own array
+function pickIt(arr){
+    let odd=[],even=[];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] % 2){
+            odd.push(arr[i])
+        } else{
+            even.push(arr[i])
+        }
+    }
+    return [odd,even];
+}
+
+console.log(pickIt([1, 2, 3]));
+
