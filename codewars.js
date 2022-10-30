@@ -499,3 +499,9 @@ function pickIt(arr){
 
 console.log(pickIt([1, 2, 3]));
 
+//35. remove all the market elements of a list (7kyu)
+    //Define a method/function that removes from a given array of integers all the values contained in a second array.
+    //filter () method and includes ()
+Array.prototype.remove_ = (integer_list, values_list) => 
+    integer_list.filter(element => !values_list.includes(element)) //use ! operator to check what is not in the values_list
+
